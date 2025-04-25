@@ -1,1 +1,36 @@
+# Build files and binaries
+build/
+bin/
+*.exe
+*.out
+*.o
+*.obj
+*.a
+*.so
+*.dll
+
+# CMake files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# VSCode config (optional: keep if collaborative)
 .vscode/
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Docker cache layers
+*.tar
+*.tar.gz
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary
+*.log
+*.tmp
+
+# Core dumps (just in case)
+core
