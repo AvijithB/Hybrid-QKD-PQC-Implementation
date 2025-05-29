@@ -1,0 +1,3 @@
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E rm -f CMakeFiles\bb84_simulation.dir/objects.a
+D:\Languages\Mingw\bin\ar.exe cr CMakeFiles\bb84_simulation.dir/objects.a @CMakeFiles\bb84_simulation.dir\objects1.rsp
+D:\Languages\Mingw\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\bb84_simulation.dir/objects.a -Wl,--no-whole-archive -o bb84_simulation.exe -Wl,--out-implib,libbb84_simulation.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\bb84_simulation.dir\linklibs.rsp
