@@ -1,18 +1,11 @@
-#include "bb84.h"
+#include "bb84_clean.h"
 #include <iostream>
 #include <vector>
 #include <cstdlib>
 #include <ctime>
+#include "bb84Utils.h"
 
-int randomBit(){
-    return rand() % 2;
-}
-
-char randomBasis(){
-    return (rand() % 2 == 0 ) ? 'Z' : 'X';
-}
-
-void run_bb84(int n){
+void run_bb84_clean(int n){
     std::vector<int> aliceBits(n);
     std::vector<char> aliceBases(n);
     std::vector<char> bobBases(n);

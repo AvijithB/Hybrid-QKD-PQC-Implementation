@@ -1,3 +1,0 @@
-D:/projectDirectory/QuantumCryptography/build/CMakeFiles/rebuild_cache.dir
-D:/projectDirectory/QuantumCryptography/build/CMakeFiles/bb84_simulation.dir
-D:/projectDirectory/QuantumCryptography/build/CMakeFiles/edit_cache.dir

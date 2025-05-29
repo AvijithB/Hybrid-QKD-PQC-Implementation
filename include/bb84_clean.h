@@ -3,6 +3,6 @@
 
 #include <vector>
 
-void run_bb84(int n);
+void run_bb84_clean(int n);
 
 #endif
