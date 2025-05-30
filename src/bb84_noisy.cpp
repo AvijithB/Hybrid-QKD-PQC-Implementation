@@ -5,7 +5,7 @@
 #include <ctime>
 #include "bb84Utils.h"
 
-void run_bb84_noisy(int n,float noise){
+double run_bb84_noisy(int n,float noise,bool qberOnly){
     std::vector<int> aliceBits(n);
     std::vector<char> aliceBases(n);
     std::vector<char> bobBases(n);
@@ -38,18 +38,18 @@ void run_bb84_noisy(int n,float noise){
             siftedBob.push_back(bobResults[i]);
         }
     }
+    if(qberOnly==false){
+        std::cout << "\n<========== BB84 Simulation Please Work Else i will cry ft. noise===========>\n";
+        std::cout << "Transimitted bit count is : " << n << "\n";
+        std::cout << "The bases that match: " << siftedAlice.size() << "\n\n";
 
-    std::cout << "\n<========== BB84 Simulation Please Work Else i will cry ft. noise===========>\n";
-    std::cout << "Transimitted bit count is : " << n << "\n";
-    std::cout << "The bases that match: " << siftedAlice.size() << "\n\n";
+        std::cout << "Alice sifted Key is : ";
+        for(int bit:siftedAlice) std::cout << bit;
+        std::cout<<"\n";
 
-    std::cout << "Alice sifted Key is : ";
-    for(int bit:siftedAlice) std::cout << bit;
-    std::cout<<"\n";
-
-    std::cout<<"Bob sifted Key: ";
-    for(int bit: siftedBob) std::cout << bit;
-    std::cout << "\n";
+        std::cout<<"Bob sifted Key: ";
+        for(int bit: siftedBob) std::cout << bit;
+        std::cout << "\n";}
 
     int errors = 0;
     for (size_t i =0 ; i<siftedAlice.size();++i){
@@ -57,4 +57,5 @@ void run_bb84_noisy(int n,float noise){
     }
     double qber = (siftedAlice.empty()) ? 0.0 : (double)errors/siftedAlice.size();
     std::cout<<"QBER: " << qber*100<<"\n";
+    return qber;
 }
