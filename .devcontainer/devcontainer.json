@@ -1,0 +1,21 @@
+{
+  "name": "Hybrid QKD DevContainer",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools"
+      ]
+    }
+  },
+  "postCreateCommand": "",  // Leave this empty for now
+  "remoteUser": "root",
+  // Mount the project directory into the container
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+  ]
+}
