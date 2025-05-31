@@ -1,7 +1,8 @@
 {
   "name": "Hybrid QKD DevContainer",
   "build": {
-    "dockerfile": "Dockerfile"
+    "dockerfile": "Dockerfile",
+    "context": ".."
   },
   "workspaceFolder": "/workspace",
   "customizations": {
@@ -16,6 +17,9 @@
   "remoteUser": "root",
   // Mount the project directory into the container
   "mounts": [
-    "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
-  ]
+    "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    // "source=/ssh-auth,target=/tmp/auth-sock,type=bind"
+  ],
+  
+  
 }
