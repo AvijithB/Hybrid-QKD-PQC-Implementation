@@ -10,7 +10,7 @@
 int main(){
     srand(time(0));
     int choice;
-    std::cout<<"Noisy[1] / Noiseless[2] ; NoisyGraph[3] / NoiselessGraph[4]" ;
+    std::cout<<"Noisy[1] / Noiseless[2] ; NoisyGraph[3] / NoiselessGraph[4] / E91[InDevelopment]" ;
     std::cin>> choice;
 
     if(choice==1){
@@ -34,9 +34,6 @@ int main(){
         out.close();
         int returncode = system("python3 /workspace/Analysis/clean.py '/workspace/QBERData/clean.csv'");
     }
-    
-    
-    
     else {
         std::cout<<"damn no numbers D:\n";
     }
